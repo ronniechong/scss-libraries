@@ -9,6 +9,6 @@ A Collection of SASS mixins and libraries for mobile and responsive web developm
 
 
 <h2>Instructions</h2>
-
+Open style.css to edit your scss. It contains all the mixins from the /inc/ folder
 
 ======================================================================
