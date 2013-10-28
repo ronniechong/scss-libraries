@@ -1,0 +1,17 @@
+//
+// Ronnie Chong
+//
+// List CSS
+// Ver 1.0 (7th May 2013) - scss added
+
+//Condition for list - Wordpress or none Wordpress environment
+
+@mixin set-list($isWP, $bull: disc, $left: 0){
+	@if $isWP {
+		list-style:outside $bull;
+		 li{margin-left: $left; }
+	} @else{
+		list-style:outside none;
+		li{margin-left: $left;}
+	}
+}

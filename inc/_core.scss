@@ -1,0 +1,135 @@
+//
+// Ronnie Chong
+//
+// Core functions and CSS
+// Ver 1.0 (7th May 2013) - scss added
+
+@mixin debug($style:1,$clr:red) {
+  @if $style=='1' {
+    border:1px solid $clr;
+  } 
+  @if $style=='2'{
+    background:$clr;
+  }
+}
+//@mixin clearfix() {
+//  *zoom: 1;
+//  &:before,
+//  &:after {
+//    content: " ";
+//    display: table;
+ // }
+
+  //&:after {
+   // clear: both;
+ // }
+//}
+
+@mixin clearfix() {
+    *zoom:1;
+    &:before, &:after {
+        content: "\0020"; 
+        display: block; 
+        height: 0; 
+        overflow: hidden; 
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin clear() {
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin shadow-box($property:1px 1px 1px #000) {
+  -moz-box-shadow: $property;
+  -webkit-box-shadow: $property;
+  box-shadow: $property;
+}
+
+@mixin hoverActiveFocus($property, $value) {
+    &:hover, &:active, &:focus {
+        #{$property}: $value;
+    }
+}
+@mixin format-list{
+  list-style: none;
+  li{margin:0}
+}
+@mixin content-centre($width){
+	width:$width;
+  display:block;
+	margin-left:auto;
+  margin-right:auto;
+}
+
+@mixin hide-text{
+    //This is outdated method
+    text-indent:-9999em;
+    display:block;
+
+    font: 0/0 ;
+    text-shadow: none;
+    color: transparent;
+}
+
+@mixin transition($effect: all 0.25s){
+	-moz-transition: $effect; 
+	-webkit-transition: $effect; 
+	-o-transition: $effect; 
+	-ms-transition: $effect;
+  transition: $effect;
+}
+
+//Positioning
+@mixin position ($position: relative, $coordinates: 0 0 0 0) {
+
+  @if type-of($position) == list {
+    $coordinates: $position;
+    $position: relative;
+  }
+
+  $top: nth($coordinates, 1);
+  $right: nth($coordinates, 2);
+  $bottom: nth($coordinates, 3);
+  $left: nth($coordinates, 4);
+
+  position: $position;
+
+  @if $top == auto {
+    top: $top;
+  }
+  @else if not(unitless($top)) {
+    top: $top;
+  }
+
+  @if $right == auto {
+    right: $right;
+  }
+  @else if not(unitless($right)) {
+    right: $right;
+  }
+
+  @if $bottom == auto {
+    bottom: $bottom;
+  }
+  @else if not(unitless($bottom)) {
+    bottom: $bottom;
+  }
+
+  @if $left == auto {
+    left: $left;
+  }
+  @else if not(unitless($left)) {
+    left: $left;
+  }
+}

@@ -1,0 +1,210 @@
+
+/*
+Project Name:  XXXXX
+Author: Ronnie Chong
+Author URI: http://www.otakuness.com
+Version: 1.0
+
+*/
+
+
+//
+//SASS 3.2
+//
+//
+//
+//
+//
+//IMPORT WEBFONTS
+//
+/******************* IMPORT FONTS ********************/
+//@import "fonts.css"; //Define imported fonts here
+
+
+// Is this a CSS for Wordpress or other CMS?
+$isWordpress: false;
+
+// Is this a CSS for Responsive Design?
+$isResponsive: false;
+
+// Is this a CSS for Mobile?
+$isMobile: false;
+
+
+//
+//IMPORT LIBRARIES
+//
+@import "inc/reset-css";
+@import "inc/radius";
+@import "inc/typography";
+@import "inc/functions";
+@import "inc/lists";
+@import "inc/core";
+@import "inc/responsive";
+@import "inc/mobile";
+
+
+//Custom mixins for project
+//@import "compass/reset";
+//@import "960/grid";
+
+
+//
+// THEME SETTINGS
+//
+
+//SETTINGS for 960
+$ninesixty-columns:16;
+$ninesixty-grid-width :960px;
+$ninesixty-gutter-width:20px;
+
+//Colours
+$bg-clr:#ffffff;
+$body-clr:#000000;
+$primary-clr:#000000;
+$secondary-clr:#000000;
+$tertiary-clr:#000000;
+
+
+//Font
+$fnt-primary: $arial;
+$fnt-secondary: $arial;
+$fnt-tertiary: $arial;
+$fnt-common: $arial;
+
+
+//Dev standards
+// frm = form
+// fmt = format
+// fmt-list = formatted list
+// input-container = holder for input
+
+
+/******************* SETUP ********************/
+h1{}
+h2{}
+h3{}
+
+p{}
+
+a{
+  @include transition((color 0.15s linear, text-decoration 0.15s linear));
+  &:hover, &:link, &:active, &:visited {
+        
+  } 
+}
+ul{
+  @include set-list($isWordpress, none, 0);
+}
+ol{
+  @include set-list($isWordpress, none, 0);
+}
+
+li{}
+
+strong{}
+em{}
+
+dl{}
+dt{}
+dd{}
+
+img{outline:0; vertical-align: bottom;}
+
+label{}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="submit"],
+input[type="checkbox"]
+input[type="radio"]{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+button,
+html input[type="button"], 
+input[type="reset"], 
+input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+
+input, textarea, button, select {
+	margin: 0;
+	font-size: 100%;
+	line-height: normal;
+	vertical-align: baseline;
+}
+
+textarea{overflow:auto;}
+
+html{
+	height: 100%; 
+	-webkit-text-size-adjust: 100%; 
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+}
+body{
+	font-size:100%; //70% - responsive settings?
+	font-family:$arial, "sans-serif";
+	background-color:$bg-clr;
+	//-webkit-tap-highlight-color: rgba(255,0,0, 0.62);
+}
+
+
+
+/******************* LAYOUT ********************/
+
+//CSS3 Modernizr - Fades in content if supported
+.csstransitions{
+  .main-container{
+    -webkit-animation: content-fadeIn 2s 1; 
+    -moz-animation:    content-fadeIn 2s 1; 
+    -o-animation:      content-fadeIn 2s 1; 
+    animation:         content-fadeIn 2s 1; 
+  }
+}
+
+@-webkit-keyframes content-fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes content-fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes content-fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes content-fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/******************* STANDARD ********************/
+
+
+/******************* FORMS ********************/
+
+
+/******************* BUTTONS ********************/
+
+
+/***************** COMMON ********************/
+
+.float-left{float:left;}
+.float-right{float:right;}
+.clear:before,
+.clear:after {
+    content:"";
+    display:table;
+}
+.clear:after {clear:both;}
+.clear {zoom:1;clear:both;}
