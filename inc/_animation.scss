@@ -1,0 +1,82 @@
+//
+// Ronnie Chong
+//
+// Animation mixins
+// Ver 1.0 (1st Nov 2013) - scss added
+
+@mixin animation-keyframes($name:myanimation){
+	@-moz-keyframes $name {@content;}
+	@-webkit-keyframes $name  {@content;}
+	@-o-keyframes $name  {@content;}
+	@-ms-keyframes $name  {@content;}
+	@keyframes $name  {@content;}
+
+}
+
+@mixin animation-name($name:myanimation){
+	-webkit-animation-name: $name;
+	-moz-animation-name: $name;
+	-ms-animation-name: $name;
+	-o-animation-name: $name;
+	animation-name: $name; 
+}
+
+//This is a shorthand animation
+@mixin animation-short($short:myanimation 1s ease 0 1 normal){
+	-webkit-animation: $short;
+	-moz-animation: $short;
+	-ms-animation: $short;
+	-o-animation: $short;
+	animation: $short; 
+}
+
+
+@mixin animation-duration($duration:1s) {
+  -webkit-animation-duration: $duration;
+  -moz-animation-duration: $duration;
+  -ms-animation-duration: $duration;
+  animation-duration: $duration;
+}
+
+
+@mixin animation-timing-function($timing:ease) {
+  -webkit-animation-timing-function: $timing;
+  -moz-animation-timing-function: $timing;
+  -ms-animation-timing-function: $timing;
+  animation-timing-function: $timing;
+}
+ 
+@mixin animation-iteration-count($count:1) {
+  -webkit-animation-iteration-count: $name;
+  -moz-animation-iteration-count: $name;
+  -ms-animation-iteration-count: $name;
+  animation-iteration-count: $name;
+}
+ 
+@mixin animation-direction($dir:normal) {
+  -webkit-animation-direction: $dir;
+  -moz-animation-direction: $dir;
+  -ms-animation-direction: $dir;
+  animation-direction: $dir;
+}
+ 
+@mixin animation-delay($delay:0) {
+  -webkit-animation-delay: $delay;
+  -moz-animation-delay: $delay;
+  -ms-animation-delay: $delay;
+  animation-delay: $delay;
+}
+ 
+@mixin animation-play-state($state:running) {
+  -webkit-animation-play-state: $state;
+  -moz-animation-play-state: $state;
+  -ms-animation-play-state: $state;
+  animation-play-state: $state;
+}
+ 
+@mixin animation-fill-mode($mode:fowards) {
+  -webkit-animation-fill-mode: $mode;
+  -moz-animation-fill-mode: $mode;
+  -ms-animation-fill-mode: $mode;
+  animation-fill-mode: $mode;
+}
