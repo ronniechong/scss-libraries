@@ -8,5 +8,7 @@ A Collection of SASS mixins and libraries for mobile and responsive web developm
 
 
 ##Instructions##
-Open style.css to edit your scss. It contains all the mixins from the ```/components/``` folder
+Open style.scss to edit and compile your scss. It contains all the mixins from the ```/components/``` folder
+
+Settings are in ```_variables.scss``` 
 
