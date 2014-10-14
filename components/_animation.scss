@@ -1,8 +1,9 @@
-//
+//***************************************
 // Ronnie Chong
 //
 // Animation mixins
 // Ver 1.0 (1st Nov 2013) - scss added
+//***************************************
 
 @mixin animation-keyframes($name:myanimation){
 	@-moz-keyframes $name {@content;}

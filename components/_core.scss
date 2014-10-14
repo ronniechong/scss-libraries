@@ -1,8 +1,9 @@
-//
+//***************************************
 // Ronnie Chong
 //
 // Core functions and CSS
 // Ver 1.0 (7th May 2013) - scss added
+//***************************************
 
 @mixin debug($style:1,$clr:red) {
   @if $style=='1' {
