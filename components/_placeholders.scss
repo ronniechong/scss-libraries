@@ -1,0 +1,29 @@
+//***************************************
+// Ronnie Chong
+//
+// Placeholders mixins
+// Ver 1.0 (13th Oct 2014) - scss added
+//***************************************
+
+%position-relative {
+    position: relative;
+}
+
+%position-absolute {
+    position: absolute;
+}
+
+%float-left {
+    float: left;
+}
+
+%float-right {
+  float: right;
+}
+
+%display-block {
+    display: block;
+}
+%display-none {
+    display: none;
+}

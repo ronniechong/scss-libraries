@@ -1,0 +1,85 @@
+//***************************************
+// Ronnie Chong
+//
+// Scaffolding
+// Ver 1.0 (13th Oct 2014) - scss moved
+//***************************************
+
+h1{}
+h2{}
+h3{}
+h4{}
+h5{}
+
+p{}
+
+a{
+  @include transition((color 0.15s linear, text-decoration 0.15s linear));
+  &:hover, &:link, &:active, &:visited {
+        
+  } 
+}
+ul{
+  @include set-list($isWordpress, none, 0);
+}
+ol{
+  @include set-list($isWordpress, none, 0);
+}
+
+li{}
+
+strong{}
+em{}
+
+dl{}
+dt{}
+dd{}
+
+img{outline:0; vertical-align: bottom;}
+
+label{}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="submit"],
+input[type="checkbox"]
+input[type="radio"]{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+button,
+html input[type="button"], 
+input[type="reset"], 
+input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+
+input, textarea, button, select {
+	margin: 0;
+	font-size: 100%;
+	line-height: normal;
+	vertical-align: baseline;
+}
+
+textarea{overflow:auto;}
+
+html{
+	height: 100%; 
+	-webkit-text-size-adjust: 100%; 
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+}
+body{
+	font-size:100%; //70% - responsive settings?
+	font-family:$arial, "sans-serif";
+	background-color:$bg-clr;
+	//-webkit-tap-highlight-color: rgba(255,0,0, 0.62);
+}
+

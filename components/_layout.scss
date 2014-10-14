@@ -1,0 +1,33 @@
+//***************************************
+// Ronnie Chong
+//
+// Layout
+// Ver 1.0 (13th Oct 2014) - scss moved
+//***************************************
+
+//CSS3 Modernizr - Fades in content if supported
+.csstransitions{
+  .main-container{
+    -webkit-animation: content-fadeIn 2s 1; 
+    -moz-animation:    content-fadeIn 2s 1; 
+    -o-animation:      content-fadeIn 2s 1; 
+    animation:         content-fadeIn 2s 1; 
+  }
+}
+
+@-webkit-keyframes content-fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes content-fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes content-fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes content-fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}

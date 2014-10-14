@@ -1,0 +1,12 @@
+// Common 
+//********************
+
+.float-left{float:left;}
+.float-right{float:right;}
+.clear:before,
+.clear:after {
+    content:"";
+    display:table;
+}
+.clear:after {clear:both;}
+.clear {zoom:1;clear:both;}
