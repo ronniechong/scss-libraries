@@ -1,0 +1,42 @@
+//********************
+// Settings
+//********************
+
+//Complete reset or normalise?
+$isReset:false;
+
+// Is this a CSS for Wordpress or other CMS?
+$isWordpress: false;
+
+// Is this a CSS for Responsive Design?
+$isResponsive: false;
+
+// Is this a CSS for Mobile?
+$isMobile: false;
+
+
+//********************
+// 960 grid
+//********************
+$ninesixty-columns:16;
+$ninesixty-grid-width :960px;
+$ninesixty-gutter-width:20px;
+
+
+//********************
+// Variables
+//********************
+
+//Colours
+$bg-clr:#ffffff;
+$body-clr:#000000;
+$primary-clr:#000000;
+$secondary-clr:#000000;
+$tertiary-clr:#000000;
+
+
+//Font
+$fnt-primary: $arial;
+$fnt-secondary: $arial;
+$fnt-tertiary: $arial;
+$fnt-common: $arial;
